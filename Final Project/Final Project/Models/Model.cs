@@ -25,6 +25,7 @@ namespace Final_Project.Models
     {
         Gift, NotGift //not sure what goes here
     }
+    
     public class User
     {
         public Int32 UserID { get; set; }
