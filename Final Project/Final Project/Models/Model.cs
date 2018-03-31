@@ -85,6 +85,7 @@ namespace Final_Project.Models
 
         [Display(Name = "Credit Card Number")]
         [Required(ErrorMessage = "Please enter valid Credit Card Number")] //regex depends on cctype
+        [DataType(DataType.CreditCard)]
         public Int32 CreditCardNumber { get; set; }
 
         [Display(Name = "Expiration Date")]
