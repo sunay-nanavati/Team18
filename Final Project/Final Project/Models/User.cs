@@ -4,7 +4,10 @@ using System.Linq;
 using System.Web;
 using System.ComponentModel.DataAnnotations;
 
-public class User
+namespace Final_Project.Models
+{
+    
+    public class User
     {
         public Int32 UserID { get; set; }
                 
@@ -52,3 +55,4 @@ public class User
         public List<CreditCard> CreditCards { get; set; }
         public List<Order> Orders { get; set; }
     }
+}
