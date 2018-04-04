@@ -13,12 +13,15 @@ namespace Final_Project.Models
 
     public class Movie
     {
-        
+        [Required]
+        [Display(Name = "Movie ID")] 
         public Int32 MovieID { get; set; }
         
         [Required(ErrorMessage = "Please enter valid Title")]
+        [Display(Name = "Title")] 
         public String Title { get; set; }
         
+        [Display(Name = "Tagline")] 
         public String Tagline { get; set; }
 
         [Required(ErrorMessage = "Please enter valid Release Year")]
@@ -26,6 +29,7 @@ namespace Final_Project.Models
         public DateTime ReleaseYear { get; set; }
         
         [Required(ErrorMessage = "Please enter valid running time")]
+        [Display(Name = "Running Time")] 
         public Int32 RunTime { get; set; }
 
         [Required(ErrorMessage = "Please enter valid Custoemr Rating")]
@@ -33,12 +37,15 @@ namespace Final_Project.Models
         public Decimal CustomerRating { get; set; } //must be between 1.0 and 5.0, inclusive
         
         [Required(ErrorMessage = "Please enter valid MPAA Rating")]
+        [Display(Name = "MPAA Rating")] 
         public MPAA MPAA { get; set; }
         
         [Required(ErrorMessage = "Please enter at least one Actor")]
+        [Display(Name = "Actors")] 
         public String Actors { get; set; }
         
         [Required(ErrorMessage = "Please enter Overview")]
+        [Display(Name = "Overview")] 
         public String Overview { get; set; }
         
         public List<Showtime> Showtimes { get; set; }
