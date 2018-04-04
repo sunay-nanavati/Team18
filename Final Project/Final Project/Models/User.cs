@@ -9,6 +9,15 @@ namespace Final_Project.Models
     
     public class User
     {
+       
+        [Required(ErrorMessage = "Please enter Username")] //??
+        [Display(Name = "Username")]
+        public String Username { get; set; } 
+        
+        [Required(ErrorMessage = "Please enter Password")] //??
+        [Display(Name = "Passowrd")]
+        public String Password { get; set; } 
+        
         [Required]
         [Display(Name = "User ID")]
         public Int32 UserID { get; set; }
