@@ -9,12 +9,15 @@ namespace Final_Project.Models
     
     public class User
     {
+        [Required]
         public Int32 UserID { get; set; }
                 
         [Required(ErrorMessage = "Please enter valid Email")]
+        [Display(Name = "Email")]
         public String Email { get; set; } 
         
         [Required(ErrorMessage = "Please enter a Password")]
+        [Display(Name = "Password")]
         public String Password { get; set; }
         
         [Required(ErrorMessage = "Please enter a First Name")]
@@ -25,30 +28,31 @@ namespace Final_Project.Models
         [Display(Name = "Last Name")]
         public String LastName { get; set; }
         
-        [Required(ErrorMessage = "Please enter Street Address")]
         [Display(Name = "Street Address")]
         public String StreetAddress { get; set; }
         
-        [Required(ErrorMessage = "Please enter a valid City")]
+        [Display(Name = "City")]
         public String City { get; set; }
         
-        [Required(ErrorMessage = "Please enter valid State")]
+        [Display(Name = "State")]
         public String State { get; set; }
 
-        [Required(ErrorMessage = "Please enter valid ZIP Code")]
         [Display(Name = "ZIP Code")]
         public Int32 ZipCode { get; set; }
 
         [Required(ErrorMessage = "Please enter valid birthday")]
+        [Display(Name = "Birthday")]
         public DateTime Birthday { get; set; }
-
+        
+        [Required]
         [Display(Name = "Popcorn Points")]
         public Int32 PopcornPoints { get; set; }
         
         [Required(ErrorMessage = "Please enter valid phone number")]
         [Display(Name = "Phone Number")]
         public Int32 PhoneNumber { get; set; }
-
+        
+        [Required]
         [Display(Name = "Employment Status")] //maybe?
         public Boolean IsEmployed { get; set; }
 
