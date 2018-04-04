@@ -40,3 +40,4 @@ namespace Final_Project.Models
 
         public User User { get; set; }
     }
+}
