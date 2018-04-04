@@ -17,6 +17,10 @@ namespace Final_Project.Models
         [Display(Name = "Movie ID")] 
         public Int32 MovieID { get; set; }
         
+        [Required]
+        [Display(Name = "Movie Number")] 
+        public Int32 MovieNumber { get; set; }
+        
         [Required(ErrorMessage = "Please enter valid Title")]
         [Display(Name = "Title")] 
         public String Title { get; set; }
