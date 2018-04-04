@@ -8,6 +8,7 @@ namespace Final_Project.Models
 {
     public class Review
     {
+        [Display(Name = "Review ID")]
         public Int32 ReviewID { get; set; }
 
         [Display(Name = "Review Score")]
@@ -15,7 +16,11 @@ namespace Final_Project.Models
 
         [Display(Name = "Movie Review")]
         public String MovieReview { get; set; }
+        
+        [Display(Name = "Upvote")]
         public Boolean Upvote { get; set; } //maybe enum here
+        
+        [Display(Name = "Approved")]
         public Boolean Approved { get; set; }
 
         public Movie Movie { get; set; }
