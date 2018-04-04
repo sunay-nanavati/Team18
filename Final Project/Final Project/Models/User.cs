@@ -6,10 +6,8 @@ using System.ComponentModel.DataAnnotations;
 
 namespace Final_Project.Models
 {
-    
     public class User
     {
-       
         [Required(ErrorMessage = "Please enter Username")] //??
         [Display(Name = "Username")]
         public String Username { get; set; } 
@@ -22,8 +20,9 @@ namespace Final_Project.Models
         [Display(Name = "User ID")]
         public Int32 UserID { get; set; }
                 
-        [Required(ErrorMessage = "Please enter valid Email")]
-        [Display(Name = "Email")]
+        [Required(ErrorMessage = "Please enter Email Address")]
+        [DataType(DataType.EmailAddress, ErrorMessage = "Please enter valid Email Address")]
+        [Display(Name = "Email Address")]
         public String Email { get; set; } 
         
         [Required(ErrorMessage = "Please enter a Password")]
@@ -33,6 +32,10 @@ namespace Final_Project.Models
         [Required(ErrorMessage = "Please enter a First Name")]
         [Display(Name = "First Name")]
         public String FirstName { get; set; }
+        
+        [Display(Name = "Middle Initial")]
+        [StringLength(1)]
+        public String MiddleInitial { get; set; }
 
         [Required(ErrorMessage = "Please enter a Last Name")]
         [Display(Name = "Last Name")]
@@ -44,10 +47,11 @@ namespace Final_Project.Models
         [Display(Name = "City")]
         public String City { get; set; }
         
-        [Display(Name = "State")]
+        [Display(Name = "State")] //might need enum here
         public String State { get; set; }
 
         [Display(Name = "ZIP Code")]
+        [StringLength(5)]
         public Int32 ZipCode { get; set; }
 
         [Required(ErrorMessage = "Please enter valid birthday")]
@@ -59,6 +63,7 @@ namespace Final_Project.Models
         public Int32 PopcornPoints { get; set; }
         
         [Required(ErrorMessage = "Please enter valid phone number")]
+        [StringLength(10)]
         [Display(Name = "Phone Number")]
         public Int32 PhoneNumber { get; set; }
         
