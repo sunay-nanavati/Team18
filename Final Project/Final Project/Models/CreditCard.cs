@@ -14,6 +14,7 @@ namespace Final_Project.Models
     public class CreditCard
     {
         [Required]
+        [Display(Name = "Credit Card ID")] 
         public Int32 CreditCardID { get; set; }
 
         [Required(ErrorMessage = "Please enter valid CreditCardType")]
@@ -33,9 +34,10 @@ namespace Final_Project.Models
         [Display(Name = "CVV")]  
         public Int32 CVV { get; set; }
         
-        [Required]
+        [Required(ErrorMessage = "Please enter Name")]
+        [Display(Name = "Name")] 
         public String Name { get; set; }
-
+        
         [Required(ErrorMessage = "Please enter valid Billing Address")]
         [Display(Name = "Billing Address")]    
         public String BillingAddress { get; set; }
