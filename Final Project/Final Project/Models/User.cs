@@ -10,6 +10,7 @@ namespace Final_Project.Models
     public class User
     {
         [Required]
+        [Display(Name = "User ID")]
         public Int32 UserID { get; set; }
                 
         [Required(ErrorMessage = "Please enter valid Email")]
